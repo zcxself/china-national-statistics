@@ -1,0 +1,322 @@
+/* China by the Numbers — a plain official-statistics look: deep navy, one red
+   accent, generous white space, big numerals, tables with units. No webfonts,
+   no images from the network: everything on the page is a file of this site. */
+
+:root {
+  --navy: #16324f;
+  --navy-dark: #0e2237;
+  --red: #b42318;
+  --red-soft: #fdecea;
+  --gold: #9a7b0a;
+  --ink: #1c2733;
+  --muted: #5b6b7c;
+  --line: #dfe6ee;
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.55;
+  font-size: 16px;
+}
+
+a { color: var(--navy); }
+a:hover { color: var(--red); }
+
+/* ---------- header ---------- */
+.masthead {
+  background: var(--navy);
+  color: #fff;
+  padding: 0;
+}
+.masthead-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px 20px 0;
+}
+.brand { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.brand-mark {
+  display: inline-block;
+  width: 14px; height: 14px;
+  background: var(--red);
+  border-radius: 3px;
+  transform: translateY(1px);
+}
+.brand h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: 0.2px;
+}
+.brand .tagline {
+  margin: 0;
+  font-size: 14px;
+  color: #c4d2e0;
+}
+.masthead .scope {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #9db2c6;
+}
+
+nav.tabs {
+  display: flex;
+  gap: 4px;
+  margin-top: 18px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+nav.tabs a {
+  color: #d7e1ea;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 16px 12px;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+}
+nav.tabs a:hover { color: #fff; }
+nav.tabs a[aria-current="page"] {
+  color: #fff;
+  border-bottom-color: var(--red);
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 6px 6px 0 0;
+}
+
+/* ---------- page ---------- */
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+}
+.page-head { margin-bottom: 20px; }
+.page-head h2 {
+  margin: 0 0 6px;
+  font-size: 26px;
+  color: var(--navy);
+  line-height: 1.25;
+}
+.page-head p { margin: 0; color: var(--muted); max-width: 760px; }
+.kicker {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 6px;
+}
+
+.lede {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--red);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin: 0 0 20px;
+}
+.lede p { margin: 0; }
+.lede strong { color: var(--navy); }
+
+/* ---------- KPI cards ---------- */
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 0 0 20px;
+}
+.kpi {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 18px 14px;
+}
+.kpi .label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.kpi .value {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.15;
+  margin: 4px 0 2px;
+  font-variant-numeric: tabular-nums;
+}
+.kpi .sub { font-size: 13.5px; color: var(--muted); }
+.kpi .src { font-size: 12px; color: #8a97a5; margin-top: 6px; }
+.kpi.hot { border-top: 4px solid var(--red); }
+.kpi.hot .value { color: var(--red); }
+
+/* ---------- cards & grids ---------- */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 20px;
+}
+.card > h3 {
+  margin: 0 0 4px;
+  font-size: 19px;
+  color: var(--navy);
+}
+.card .hint { margin: 0 0 12px; font-size: 13.5px; color: var(--muted); }
+.card .note { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+.card .source { font-size: 12.5px; color: #8a97a5; margin: 12px 0 0; }
+
+.chart { width: 100%; }
+.chart svg { width: 100%; height: auto; display: block; }
+.chart .axis { fill: var(--muted); font-size: 12.5px; }
+.chart .val { fill: var(--ink); font-size: 12.5px; font-weight: 700; }
+.chart .legend text { fill: var(--muted); font-size: 13px; }
+.chart .donut-centre { fill: var(--navy); font-size: 26px; font-weight: 800; }
+
+/* toggle buttons: every control on the site does something real */
+.toggle {
+  display: inline-flex;
+  gap: 6px;
+  margin: 0 0 12px;
+  flex-wrap: wrap;
+}
+.toggle button {
+  font: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 7px 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--navy);
+  cursor: pointer;
+}
+.toggle button:hover { border-color: var(--navy); }
+.toggle button[aria-pressed="true"] {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+
+/* ---------- tables ---------- */
+table.data {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+table.data th, table.data td {
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+}
+table.data th:first-child, table.data td:first-child { text-align: left; }
+table.data thead th {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  border-bottom: 2px solid var(--navy);
+}
+table.data tbody tr:hover { background: #f7f9fb; }
+table.data td.hl, table.data th.hl { color: var(--red); font-weight: 700; }
+table.data caption {
+  text-align: left;
+  font-size: 13.5px;
+  color: var(--muted);
+  padding-bottom: 8px;
+}
+th button.sort {
+  all: unset;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+}
+th button.sort:hover { color: var(--red); }
+th button.sort::after { content: " ↕"; font-size: 11px; }
+
+/* ---------- misc blocks ---------- */
+ul.tight { margin: 8px 0; padding-left: 20px; }
+ul.tight li { margin: 4px 0; }
+.fact-list { margin: 0; padding: 0; list-style: none; }
+.fact-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 2px;
+  border-bottom: 1px solid var(--line);
+}
+.fact-list li:last-child { border-bottom: 0; }
+.fact-list .k { color: var(--muted); }
+.fact-list .v { font-weight: 700; color: var(--navy); text-align: right; font-variant-numeric: tabular-nums; }
+
+.callout {
+  background: var(--red-soft);
+  border: 1px solid #f3c1bd;
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+.callout h3 { margin: 0 0 6px; color: var(--red); font-size: 18px; }
+.callout p { margin: 0; }
+
+.legend-list { list-style: none; margin: 10px 0 0; padding: 0; font-size: 14px; }
+.legend-list li { margin: 6px 0; }
+.swatch {
+  display: inline-block;
+  width: 12px; height: 12px;
+  border-radius: 3px;
+  margin-right: 8px;
+  vertical-align: -1px;
+}
+
+footer.site {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px 36px;
+  font-size: 13px;
+  color: var(--muted);
+}
+footer.site p { margin: 4px 0; }
+
+/* ---------- sources page ---------- */
+.src-item { margin-bottom: 18px; }
+.src-item h3 { margin: 0 0 4px; font-size: 17px; color: var(--navy); }
+.src-item p { margin: 0 0 4px; }
+.src-item .meta { font-size: 13px; color: var(--muted); }
+
+/* ---------- phone layout ---------- */
+@media (max-width: 760px) {
+  .brand h1 { font-size: 24px; }
+  nav.tabs { flex-wrap: wrap; }
+  nav.tabs a { padding: 8px 12px 10px; font-size: 14px; }
+  .page { padding: 18px 14px 32px; }
+  .kpis { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .kpi .value { font-size: 26px; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .page-head h2 { font-size: 22px; }
+  table.data { font-size: 13.5px; }
+  table.data th, table.data td { padding: 8px 6px; }
+  .card { padding: 14px 14px; }
+}
+@media (max-width: 430px) {
+  .kpis { grid-template-columns: 1fr 1fr; }
+  .kpi .value { font-size: 23px; }
+}

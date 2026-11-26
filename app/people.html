@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>People — China by the Numbers</title>
+<meta name="description" content="China's people in 2024: population, births and deaths, urbanisation and ageing.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="site.js"></script>
+</head>
+<body data-page="people">
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <h1>China by the Numbers</h1>
+      <p class="tagline">National statistics, 2024 · an independent statistics site</p>
+    </div>
+    <p class="scope">Figures for mainland China (excluding Hong Kong, Macao and Taiwan) · Sources: National Bureau of Statistics &amp; World Bank</p>
+    <nav class="tabs" aria-label="Sections">
+      <a href="index.html">Overview</a>
+      <a href="economy.html">Economy</a>
+      <a href="people.html" aria-current="page">People</a>
+      <a href="compare.html">Compare</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-head">
+    <span class="kicker">People · 2024</span>
+    <h2>1,408.28 million people — and fewer every year</h2>
+    <p>The population fell by 1.39 million in 2024, the third annual fall in a row. At the same time the country kept urbanising — 67.00% now live in towns and cities — and kept ageing: 310.31 million people are 60 or older.</p>
+  </div>
+
+  <div class="kpis" aria-label="People indicators 2024">
+    <div class="kpi">
+      <div class="label">Population, year-end</div>
+      <div class="value">1,408.28m</div>
+      <div class="sub">down 1.39m on 2023 (1,409.67m)</div>
+      <div class="src">NBS 2024 communique</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Natural change</div>
+      <div class="value">−0.99‰</div>
+      <div class="sub">9.54m births, 10.93m deaths</div>
+      <div class="src">NBS 2024 communique</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Urban residents</div>
+      <div class="value">943.50m</div>
+      <div class="sub">67.00% of the population</div>
+      <div class="src">NBS 2024 communique</div>
+    </div>
+  </div>
+
+  <section class="card">
+    <h3>Population, 2015–2024</h3>
+    <p class="hint">Mid-year estimates, 100 million people. The peak was 2021 (1,412.4m); the NBS year-end count for 2024 is 1,408.28m.</p>
+    <div class="chart" id="chart-population-long" aria-label="Population 2015 to 2024 chart"></div>
+    <p class="source">Source: World Bank WDI (mid-year estimates); NBS 2024 communique (year-end). The two differ by about 0.7 million because one counts mid-year and the other year-end — see <a href="sources.html">Sources</a>.</p>
+  </section>
+
+  <div class="grid-2">
+    <section class="card">
+      <h3>Births and deaths, 2021–2024</h3>
+      <p class="hint">Millions per year. Deaths have outnumbered births since 2022.</p>
+      <div class="chart" id="chart-births-deaths" aria-label="Births and deaths chart"></div>
+      <p class="note">Births rose in 2024 — to 9.54 million from 9.02 million in 2023 — the first rise since 2016, but deaths (10.93m) still exceeded them.</p>
+      <p class="source">Source: NBS communiques 2021–2024.</p>
+    </section>
+    <section class="card">
+      <h3>Urbanisation, 2015–2024</h3>
+      <p class="hint">Share of permanent residents living in urban areas, %.</p>
+      <div class="chart" id="chart-urban" aria-label="Urbanisation chart"></div>
+      <p class="note">The urban share rose 0.84 points in 2024 alone. In 2015 it was 56.10% — an 11-point rise in a decade.</p>
+      <p class="source">Source: NBS communiques 2015–2024.</p>
+    </section>
+  </div>
+
+  <section class="callout">
+    <h3>Ageing: the 300-million milestone</h3>
+    <p>In 2024 the number of people aged 60 and over reached <strong>310.31 million (22.0% of the population)</strong> — the first time it has passed 300 million. Those aged 65 and over number 220.35 million (15.6%). The working-age population (16–59) is 857.88 million, 60.9% of the total.</p>
+  </section>
+
+  <section class="card">
+    <h3>Age structure, year-end 2024</h3>
+    <p class="hint">Millions of people in each age band.</p>
+    <div class="chart" id="chart-age" aria-label="Age structure chart"></div>
+    <table class="data">
+      <caption>Age bands, year-end 2024 (NBS 2024 communique)</caption>
+      <thead><tr><th scope="col">Age band</th><th scope="col">People</th><th scope="col">Share</th></tr></thead>
+      <tbody>
+        <tr><td>Aged 0–15</td><td>240.09m</td><td>17.0%</td></tr>
+        <tr><td>Aged 16–59</td><td>857.88m</td><td>60.9%</td></tr>
+        <tr class="hl"><td>Aged 60+</td><td class="hl">310.31m</td><td class="hl">22.0%</td></tr>
+        <tr><td>&nbsp;&nbsp;of which aged 65+</td><td>220.35m</td><td>15.6%</td></tr>
+      </tbody>
+    </table>
+    <p class="source">Source: NBS 2024 communique.</p>
+  </section>
+</main>
+
+<footer class="site">
+  <p>China by the Numbers — an independent statistics site. Figures are for mainland China unless stated. Data: NBS 2024 statistical communique (28 Feb 2025); World Bank World Development Indicators, July 2026 update.</p>
+  <p>Built as an entry for make.fun’s “Make the best national statistics site” bounty.</p>
+</footer>
+</body>
+</html>

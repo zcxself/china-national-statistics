@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Economy — China by the Numbers</title>
+<meta name="description" content="China's economy in 2024: GDP, growth by quarter, what drove growth, industry structure and PPP.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="site.js"></script>
+</head>
+<body data-page="economy">
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <h1>China by the Numbers</h1>
+      <p class="tagline">National statistics, 2024 · an independent statistics site</p>
+    </div>
+    <p class="scope">Figures for mainland China (excluding Hong Kong, Macao and Taiwan) · Sources: National Bureau of Statistics &amp; World Bank</p>
+    <nav class="tabs" aria-label="Sections">
+      <a href="index.html">Overview</a>
+      <a href="economy.html" aria-current="page">Economy</a>
+      <a href="people.html">People</a>
+      <a href="compare.html">Compare</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-head">
+    <span class="kicker">Economy · 2024</span>
+    <h2>A $18.73 trillion economy that grew 5.0%</h2>
+    <p>GDP was ¥1,349,084 billion in 2024 — $18.73 trillion at market exchange rates, $38.19 trillion on a purchasing-power basis. Growth picked up through the year, from 4.6% in the third quarter to 5.4% in the fourth.</p>
+  </div>
+
+  <section class="card">
+    <h3>GDP in current US dollars, 2015–2024</h3>
+    <p class="hint">The 2020–2021 jump is mostly the yuan’s appreciation against the dollar, not a surge in output — output grew 8.1% in real terms in 2021.</p>
+    <div class="chart" id="chart-gdp-long" aria-label="GDP 2015 to 2024 chart"></div>
+    <p class="source">Source: World Bank, World Development Indicators (July 2026 update). Earlier editions of the same dataset gave $18.75tn for 2024; the July 2026 update revised it to $18.73tn.</p>
+  </section>
+
+  <div class="grid-2">
+    <section class="card">
+      <h3>Growth by quarter, 2024</h3>
+      <p class="hint">Real GDP growth, % year on year.</p>
+      <div class="chart" id="chart-quarters" aria-label="Quarterly growth chart"></div>
+      <p class="source">Source: NBS 2024 communique.</p>
+    </section>
+    <section class="card">
+      <h3>Annual growth, 2021–2024</h3>
+      <p class="hint">Real GDP growth, % year on year.</p>
+      <div class="chart" id="chart-growth-annual" aria-label="Annual growth chart"></div>
+      <p class="source">Source: NBS communiques 2021–2024.</p>
+    </section>
+  </div>
+
+  <div class="grid-2">
+    <section class="card">
+      <h3>What drove the 5.0%?</h3>
+      <p class="hint">Contributions to 2024 growth, percentage points.</p>
+      <div class="chart" id="chart-drivers" aria-label="Growth drivers chart"></div>
+      <p class="note">Consumption contributed the most (2.2 points), net exports 1.5 points and investment 1.3 points. The three sum to 5.0.</p>
+      <p class="source">Source: NBS 2024 communique.</p>
+    </section>
+    <section class="card">
+      <h3>Industry structure, 2024</h3>
+      <p class="hint">Switch between each sector’s share of GDP and its value in yuan.</p>
+      <div class="toggle" data-industry-toggle role="group" aria-label="Industry chart measure">
+        <button type="button" data-mode="share" aria-pressed="true">Share of GDP (%)</button>
+        <button type="button" data-mode="value" aria-pressed="false">Value added (¥bn)</button>
+      </div>
+      <div class="chart" id="chart-industry" aria-label="Industry structure chart"></div>
+      <p class="note" id="industry-caption">Share of GDP in 2024. Services are 56.7% of the economy; the centre number is the services share.</p>
+      <ul class="legend-list">
+        <li><span class="swatch" style="background:#c08a00"></span>Primary — farming, forestry, fishing: ¥9,141.4bn, +3.5%</li>
+        <li><span class="swatch" style="background:#16324f"></span>Secondary — manufacturing, construction: ¥49,208.7bn, +5.3%</li>
+        <li><span class="swatch" style="background:#b42318"></span>Tertiary — services: ¥76,558.3bn, +5.0%</li>
+      </ul>
+      <p class="source">Source: NBS 2024 communique.</p>
+    </section>
+  </div>
+
+  <section class="card">
+    <h3>On a purchasing-power basis, China is No. 1</h3>
+    <p class="hint">GDP (PPP), 2024, $ trillion. PPP adjusts for what money buys locally, so it suits comparing living standards; market exchange rates suit comparing trade and finance.</p>
+    <div class="chart" id="chart-ppp" aria-label="GDP PPP comparison chart"></div>
+    <p class="note">China’s GDP (PPP) was $38.19 trillion in 2024 — $27,105 per person — ahead of the United States at $29.30 trillion. On market exchange rates the order reverses: the US at $29.30tn, China at $18.73tn.</p>
+    <p class="source">Source: World Bank WDI (July 2026 update). India’s PPP figure is approximate ($15.6tn).</p>
+  </section>
+
+  <section class="card">
+    <h3>Inside industry</h3>
+    <ul class="tight">
+      <li><strong>Equipment manufacturing</strong> grew 7.7% in 2024 — 34.6% of value added by industrial firms above the designated size.</li>
+      <li><strong>High-technology manufacturing</strong> grew 8.9% — 16.3% of the same total.</li>
+      <li><strong>GDP per capita</strong> reached ¥95,749 ($13,293), up 5.1% in real terms on 2023.</li>
+      <li><strong>Gross national income</strong> was ¥1,339,672 billion, up 5.1%.</li>
+    </ul>
+    <p class="source">Source: NBS 2024 communique (English edition, 28 Feb 2025).</p>
+  </section>
+</main>
+
+<footer class="site">
+  <p>China by the Numbers — an independent statistics site. Figures are for mainland China unless stated. Data: NBS 2024 statistical communique (28 Feb 2025); World Bank World Development Indicators, July 2026 update.</p>
+  <p>Built as an entry for make.fun’s “Make the best national statistics site” bounty.</p>
+</footer>
+</body>
+</html>

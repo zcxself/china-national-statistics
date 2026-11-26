@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources — China by the Numbers</title>
+<meta name="description" content="Where every number on this site comes from, what year it covers, and where definitions differ.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="site.js"></script>
+</head>
+<body data-page="sources">
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <h1>China by the Numbers</h1>
+      <p class="tagline">National statistics, 2024 · an independent statistics site</p>
+    </div>
+    <p class="scope">Figures for mainland China (excluding Hong Kong, Macao and Taiwan) · Sources: National Bureau of Statistics &amp; World Bank</p>
+    <nav class="tabs" aria-label="Sections">
+      <a href="index.html">Overview</a>
+      <a href="economy.html">Economy</a>
+      <a href="people.html">People</a>
+      <a href="compare.html">Compare</a>
+      <a href="sources.html" aria-current="page">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-head">
+    <span class="kicker">Sources &amp; methods</span>
+    <h2>Where every number comes from</h2>
+    <p>This site anchors on 2024. It uses two publications only, so any figure can be checked in minutes. Where a figure is computed from published ones, the page says so.</p>
+  </div>
+
+  <section class="card">
+    <div class="src-item">
+      <h3>1. National Bureau of Statistics of China — Statistical Communiqué on 2024 National Economic and Social Development</h3>
+      <p>Published 28 February 2025. The source for the headline figures: year-end population (1,408.28m), births (9.54m) and deaths (10.93m), urbanisation (67.00%), the 60+ population (310.31m), GDP in yuan (¥1,349,084bn), real growth (5.0% and by quarter), industry value added and shares, and the growth contributions.</p>
+      <p class="meta">Coverage: mainland China (excluding Hong Kong, Macao and Taiwan). Figures are preliminary estimates; the NBS revises them in later releases.</p>
+    </div>
+    <div class="src-item">
+      <h3>2. World Bank — World Development Indicators, July 2026 update</h3>
+      <p>The source for dollar figures and cross-country comparisons: GDP in current US$ (China $18.73tn), GDP per capita ($13,293), GDP (PPP) ($38.19tn; $27,105 per person), the 2015–2024 GDP and population series, life expectancy (China 78.0 years), and every figure in the Compare table.</p>
+      <p class="meta">Note: an earlier release of the same dataset gave China’s 2024 GDP as $18.75tn and GDP per capita as $13,309. The July 2026 update revised both; this site uses the updated figures throughout.</p>
+    </div>
+    <div class="src-item">
+      <h3>3. NBS communiques 2015–2023 (for series)</h3>
+      <p>Used only for the historical series: urbanisation rates 2015–2023, births and deaths 2021–2023, annual growth 2021–2023, and the 2023 year-end population (1,409.67m) and urbanisation rate (66.16%) quoted for comparison.</p>
+      <p class="meta">Each year’s communique is published the following February.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>Definitions that differ — read this before comparing numbers</h3>
+    <ul class="tight">
+      <li><strong>Two population counts.</strong> The NBS year-end figure (1,408.28m) counts permanent residents on 31 December. The World Bank series counts mid-year estimates (1,409.0m for 2024). They differ by about 0.7 million because of the date, not an error. This site labels which one each chart uses.</li>
+      <li><strong>Two GDP measures.</strong> Market exchange rates ($18.73tn) value output at the rate the yuan trades at; PPP ($38.19tn) values it at what money buys locally. They answer different questions, so the site shows both and never mixes them in one chart.</li>
+      <li><strong>Growth is real, levels are nominal.</strong> Growth rates (5.0%) are adjusted for prices; GDP levels ($18.73tn) are in current dollars and move with the exchange rate — which is why GDP in dollars jumped in 2021 while real growth was 8.1%.</li>
+      <li><strong>Computed figures.</strong> GDP per capita for 2016–2023 is GDP divided by population from the two published series; the 2015 ($8,175) and 2024 ($13,293) endpoints are published directly. Age-band shares are the published headcounts divided by the published total.</li>
+      <li><strong>Rounding.</strong> Figures are shown as published; shares may not sum to exactly 100% (industry shares sum to 100.0%; age shares to 99.9% after rounding).</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3>What this site is not</h3>
+    <p>It is an independent presentation of published statistics, not an official publication. It is not affiliated with the National Bureau of Statistics or the World Bank. Figures are as published in the sources above; if a source revises a figure, this site’s 2024 snapshot does not change.</p>
+    <p class="note">No data is fetched from anywhere while you browse: the whole site is static files, and it works with no network connection.</p>
+  </section>
+</main>
+
+<footer class="site">
+  <p>China by the Numbers — an independent statistics site. Figures are for mainland China unless stated. Data: NBS 2024 statistical communique (28 Feb 2025); World Bank World Development Indicators, July 2026 update.</p>
+  <p>Built as an entry for make.fun’s “Make the best national statistics site” bounty.</p>
+</footer>
+</body>
+</html>

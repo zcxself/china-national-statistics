@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compare — China by the Numbers</title>
+<meta name="description" content="China compared with the United States, Japan and India in 2024: GDP, GDP per capita, population, growth and life expectancy.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="site.js"></script>
+</head>
+<body data-page="compare">
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <h1>China by the Numbers</h1>
+      <p class="tagline">National statistics, 2024 · an independent statistics site</p>
+    </div>
+    <p class="scope">Figures for mainland China (excluding Hong Kong, Macao and Taiwan) · Sources: National Bureau of Statistics &amp; World Bank</p>
+    <nav class="tabs" aria-label="Sections">
+      <a href="index.html">Overview</a>
+      <a href="economy.html">Economy</a>
+      <a href="people.html">People</a>
+      <a href="compare.html" aria-current="page">Compare</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-head">
+    <span class="kicker">Compare · 2024</span>
+    <h2>China against the world’s other big economies</h2>
+    <p>China is the world’s second-largest economy at market exchange rates — and the largest on a purchasing-power basis. It is growing faster than the US and Japan but slower than India, and its GDP per person ($13,293) is still a long way behind theirs.</p>
+  </div>
+
+  <section class="card">
+    <h3>Four economies, five measures</h3>
+    <p class="hint">Pick a measure to redraw the chart. China is shown in red.</p>
+    <div class="toggle" data-compare-toggle role="group" aria-label="Comparison measure">
+      <button type="button" data-mode="gdp" aria-pressed="true">GDP ($tn)</button>
+      <button type="button" data-mode="gdpPerCapita" aria-pressed="false">GDP per capita ($)</button>
+      <button type="button" data-mode="pop" aria-pressed="false">Population (100m)</button>
+      <button type="button" data-mode="growth" aria-pressed="false">Growth (%)</button>
+      <button type="button" data-mode="life" aria-pressed="false">Life expectancy (yrs)</button>
+    </div>
+    <div class="chart" id="chart-compare" aria-label="Comparison chart"></div>
+    <p class="note" id="compare-caption">GDP ($ trillion), 2024 (World Bank WDI, July 2026 update). China is shown in red.</p>
+    <p class="source">Source: World Bank, World Development Indicators (July 2026 update). Life expectancy is the WDI 2024 estimate.</p>
+  </section>
+
+  <section class="card">
+    <h3>The table, 2024</h3>
+    <p class="hint">Click any column heading to sort the table by that column.</p>
+    <table class="data" id="compare-table">
+      <caption>All figures: World Bank WDI, July 2026 update. Population is the mid-year estimate.</caption>
+      <thead>
+        <tr>
+          <th scope="col"><button type="button" class="sort" data-col="0" data-numeric="0">Country</button></th>
+          <th scope="col"><button type="button" class="sort" data-col="1" data-numeric="1">GDP ($tn)</button></th>
+          <th scope="col"><button type="button" class="sort" data-col="2" data-numeric="1">GDP per capita ($)</button></th>
+          <th scope="col"><button type="button" class="sort" data-col="3" data-numeric="1">Population (100m)</button></th>
+          <th scope="col"><button type="button" class="sort" data-col="4" data-numeric="1">Growth (%)</button></th>
+          <th scope="col"><button type="button" class="sort" data-col="5" data-numeric="1">Life expectancy (yrs)</button></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>29.30</td><td>86,170</td><td>3.40</td><td>2.8</td><td>78.9</td></tr>
+        <tr><td class="hl">China</td><td class="hl">18.73</td><td class="hl">13,293</td><td class="hl">14.09</td><td class="hl">5.0</td><td class="hl">78.0</td></tr>
+        <tr><td>Japan</td><td>4.19</td><td>33,797</td><td>1.24</td><td>-0.2</td><td>84.0</td></tr>
+        <tr><td>India</td><td>3.76</td><td>2,592</td><td>14.51</td><td>7.1</td><td>72.0</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h3>What the comparison shows</h3>
+    <ul class="tight">
+      <li><strong>Scale:</strong> the US economy ($29.30tn) is about 1.6 times China’s ($18.73tn) at market exchange rates; on a PPP basis China ($38.19tn) is larger than the US ($29.30tn).</li>
+      <li><strong>People:</strong> India (1,451m) has just overtaken China (1,409m) as the world’s most populous country; Japan (124m) is shrinking too.</li>
+      <li><strong>Income:</strong> GDP per capita runs from $2,592 in India to $86,170 in the US. China ($13,293) sits between Japan ($33,797) and India — an upper-middle-income economy by the World Bank’s line.</li>
+      <li><strong>Growth:</strong> India grew fastest (7.1%), then China (5.0%), the US (2.8%); Japan’s economy shrank slightly (−0.2%).</li>
+      <li><strong>Health:</strong> life expectancy is highest in Japan (84.0 years), then the US (78.9), China (78.0) and India (72.0).</li>
+    </ul>
+    <p class="source">Source: World Bank WDI (July 2026 update). See <a href="sources.html">Sources</a> for the exact publications.</p>
+  </section>
+</main>
+
+<footer class="site">
+  <p>China by the Numbers — an independent statistics site. Figures are for mainland China unless stated. Data: NBS 2024 statistical communique (28 Feb 2025); World Bank World Development Indicators, July 2026 update.</p>
+  <p>Built as an entry for make.fun’s “Make the best national statistics site” bounty.</p>
+</footer>
+</body>
+</html>
