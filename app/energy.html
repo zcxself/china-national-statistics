@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energy — China by the Numbers</title>
+<meta name="description" content="China's energy in 2024: self-sufficiency above 80%, CO2 per 10,000 yuan of GDP down 3.4%, and 13.17 million new-energy vehicles produced.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="site.js"></script>
+</head>
+<body data-page="energy">
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <h1>China by the Numbers</h1>
+      <p class="tagline">National statistics, 2024 · an independent statistics site</p>
+    </div>
+    <p class="scope">Figures for mainland China (excluding Hong Kong, Macao and Taiwan) · Sources: National Bureau of Statistics; Xinhua</p>
+    <nav class="tabs" aria-label="Sections">
+      <a href="index.html">Overview</a>
+      <a href="economy.html">Economy</a>
+      <a href="people.html">People</a>
+      <a href="provinces.html">Provinces</a>
+      <a href="employment.html">Employment</a>
+      <a href="trade.html">Trade</a>
+      <a href="energy.html" aria-current="page">Energy</a>
+      <a href="compare.html">Compare</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-head">
+    <span class="kicker">Energy · 2024</span>
+    <h2>Self-sufficient, cleaner per yuan — and building 13.17 million electric cars</h2>
+    <p>China produced more than 80% of the energy it used in 2024, and each yuan of GDP took less energy and less carbon to make than the year before. The year’s standout figure is industrial: 13.17 million new-energy vehicles rolled off production lines, the first time any country has passed ten million in a year.</p>
+  </div>
+
+  <section class="kpis" aria-label="Energy indicators 2024">
+    <div class="kpi">
+      <div class="label">Energy self-sufficiency</div>
+      <div class="value">Above 80%</div>
+      <div class="sub">of the energy China used, it produced itself</div>
+      <div class="src">NBS 2024 communique</div>
+    </div>
+    <div class="kpi">
+      <div class="label">CO₂ per ¥10,000 of GDP</div>
+      <div class="value">−3.4%</div>
+      <div class="sub">on 2023 — carbon per unit of output fell</div>
+      <div class="src">NBS 2024 communique</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Energy per ¥10,000 of GDP</div>
+      <div class="value">−3.8%</div>
+      <div class="sub">excluding raw-material use and non-fossil energy</div>
+      <div class="src">NBS 2024 communique</div>
+    </div>
+    <div class="kpi hot">
+      <div class="label">New-energy vehicles produced</div>
+      <div class="value">13.17m</div>
+      <div class="sub">world’s first year above ten million</div>
+      <div class="src">Xinhua, on the 2024 communique</div>
+    </div>
+  </section>
+
+  <div class="grid-2">
+    <section class="card">
+      <h3>New-energy vehicles: past ten million</h3>
+      <p class="hint">Vehicles produced in 2024, millions. “New-energy” means battery-electric, plug-in hybrid and fuel-cell vehicles.</p>
+      <div class="chart" id="chart-nev" aria-label="New-energy vehicle production chart"></div>
+      <p class="note">China was the first country to produce more than ten million new-energy vehicles in a single year.</p>
+      <p class="source">Source: Xinhua, on the NBS 2024 communique.</p>
+    </section>
+    <section class="card">
+      <h3>Cleaner per yuan of output</h3>
+      <p class="hint">How much energy and carbon each ¥10,000 of GDP took in 2024, against 2023.</p>
+      <ul class="fact-list">
+        <li><span class="k">CO₂ emissions per ¥10,000 of GDP</span><span class="v">−3.4%</span></li>
+        <li><span class="k">Energy use per ¥10,000 of GDP*</span><span class="v">−3.8%</span></li>
+        <li><span class="k">Energy self-sufficiency rate</span><span class="v">above 80%</span></li>
+      </ul>
+      <p class="note">* Energy use per unit of GDP after deducting energy used as raw material and non-fossil energy consumption — the definition the communique uses for this indicator.</p>
+      <p class="source">Source: NBS 2024 communique.</p>
+    </section>
+  </div>
+
+  <section class="card">
+    <h3>What “self-sufficiency above 80%” means</h3>
+    <p>China produced more than four-fifths of the energy it consumed in 2024 from its own coal, oil, gas, hydro, nuclear, wind and solar capacity, and imported the rest. The rate has held above 80% for years: domestic production, not imports, covers most of what the economy burns — and the share of non-fossil energy keeps rising inside that total.</p>
+    <p class="source">Source: NBS 2024 communique.</p>
+  </section>
+
+  <section class="card">
+    <h3>A note on scope</h3>
+    <p>This page carries only the energy figures the 2024 communique publishes in a form that can be quoted exactly: the self-sufficiency rate, the two intensity changes, and new-energy vehicle output. Totals such as all-society electricity consumption are not in this release in a comparable form, so this page does not estimate them.</p>
+    <p class="source">See <a href="sources.html">Sources</a> for where each figure comes from.</p>
+  </section>
+</main>
+
+<footer class="site">
+  <p>China by the Numbers — an independent statistics site. Figures are for mainland China unless stated. Data: NBS 2024 statistical communique (28 Feb 2025); Xinhua.</p>
+  <p>Built as an entry for make.fun’s “Make the best national statistics site” bounty.</p>
+</footer>
+</body>
+</html>

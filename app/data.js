@@ -182,3 +182,47 @@ export const GDP_PPP_2024 = [
   { name: 'India', value: 15.6 },
 ];
 export const PPP_NOTE = 'On a PPP basis China is the world’s largest economy: $38.19tn in 2024, $27,105 per person.';
+
+// ---- Employment, 2024 (NBS 2024 communique; sector shares: Ministry of
+// Human Resources and Social Security 2024 statistical bulletin) ----------
+export const EMPLOYMENT_2024 = {
+  employed: '734.39m',
+  urbanEmployed: '473.45m',
+  urbanShare: 64.5,
+  newUrbanJobs: '12.56m',
+  unemployment: 5.1,
+  migrantWorkers: '299.73m',
+  migrantGrowth: 0.7,
+  migrantAway: '178.71m',
+  migrantLocal: '121.02m',
+};
+export const EMPLOYMENT_SECTORS = [
+  { name: 'Primary', value: 22.2, color: '#c08a00' },
+  { name: 'Secondary', value: 29.0, color: '#16324f' },
+  { name: 'Tertiary (services)', value: 48.8, color: '#b42318' },
+];
+
+// ---- Goods trade, 2024 (General Administration of Customs, via Xinhua) ---
+// Total ¥43.85tn, up 5.0%, a record high and the 8th straight year as the
+// world's largest goods trader. Dollar figures are derived at the 2024
+// average rate of ¥7.1217 per US$; the surplus is exports minus imports.
+export const TRADE_2024 = {
+  total: 43.85,
+  totalUsd: 6.16,
+  exports: 25.45,
+  exportsUsd: 3.57,
+  exportsGrowth: 7.1,
+  imports: 18.39,
+  importsUsd: 2.58,
+  importsGrowth: 2.3,
+  growth: 5.0,
+  surplus: 7.06,
+};
+
+// ---- Energy, 2024 (NBS 2024 communique; NEV output: Xinhua) -------------
+export const ENERGY_2024 = {
+  selfSufficiency: 'above 80%',
+  co2PerGdp: -3.4,
+  energyIntensity: -3.8,
+  nevOutput: '13.17m',
+};

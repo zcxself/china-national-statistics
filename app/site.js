@@ -9,6 +9,9 @@ import {
   AGE_2024,
   BIRTHS_DEATHS,
   COMPARE_2024,
+  EMPLOYMENT_2024,
+  EMPLOYMENT_SECTORS,
+  ENERGY_2024,
   GDP_USD,
   GDP_PER_CAPITA,
   GDP_PPP_2024,
@@ -17,6 +20,7 @@ import {
   GROWTH_QUARTER_2024,
   INDUSTRY_2024,
   POPULATION_MID,
+  TRADE_2024,
   URBAN_RATE,
 } from './data.js';
 import { barChart, donut, groupedBars, hbarChart, lineChart } from './charts.js';
@@ -274,6 +278,82 @@ function renderCompare() {
   }
 }
 
+// ---- Employment -----------------------------------------------------------
+function renderEmployment() {
+  const sectors = byId('chart-sectors');
+  if (sectors) {
+    renderInto(
+      sectors,
+      donut(
+        EMPLOYMENT_SECTORS.map((d) => ({ label: d.name, value: d.value, color: d.color })),
+        { centre: '48.8%', size: 240 },
+      ),
+    );
+  }
+  const urban = byId('chart-urban-jobs');
+  if (urban) {
+    renderInto(
+      urban,
+      hbarChart(
+        [
+          { label: 'Employed, total', value: 734.39, color: NAVY },
+          { label: 'Employed in towns and cities', value: 473.45, color: CHINA },
+          { label: 'Migrant workers', value: 299.73, color: TEAL },
+        ],
+        { unit: 'm', decimals: 0, max: 800 },
+      ),
+    );
+  }
+}
+
+// ---- Energy ---------------------------------------------------------------
+function renderEnergy() {
+  const nev = byId('chart-nev');
+  if (nev) {
+    renderInto(
+      nev,
+      hbarChart(
+        [
+          { label: 'New-energy vehicles produced', value: parseFloat(ENERGY_2024.nevOutput), color: CHINA },
+          { label: 'Ten million a year, the old milestone', value: 10, color: NAVY },
+        ],
+        { unit: 'm', decimals: 2, max: 14 },
+      ),
+    );
+  }
+}
+
+// ---- Trade ----------------------------------------------------------------
+function renderTrade() {
+  const flows = byId('chart-trade');
+  if (flows) {
+    renderInto(
+      flows,
+      barChart(
+        [
+          { label: 'Exports', value: TRADE_2024.exports },
+          { label: 'Imports', value: TRADE_2024.imports },
+        ],
+        { unit: '', decimals: 2, colors: [CHINA, NAVY] },
+      ),
+    );
+  }
+  const balance = byId('chart-balance');
+  if (balance) {
+    renderInto(
+      balance,
+      hbarChart(
+        [
+          { label: 'Exports', value: TRADE_2024.exports, color: CHINA },
+          { label: 'Imports', value: TRADE_2024.imports, color: NAVY },
+          { label: 'Trade surplus', value: TRADE_2024.surplus, color: TEAL },
+        ],
+        { unit: '', decimals: 2, max: 27 },
+      ),
+    );
+  }
+}
+
 // ---- boot -----------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.body.dataset.page;
@@ -281,5 +361,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (page === 'economy') renderEconomy();
   if (page === 'people') renderPeople();
   if (page === 'compare') renderCompare();
+  if (page === 'employment') renderEmployment();
+  if (page === 'trade') renderTrade();
+  if (page === 'energy') renderEnergy();
   window.__shotReady = true;
 });

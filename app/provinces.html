@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Provinces — China by the Numbers</title>
+<meta name="description" content="China's 31 provinces in 2024: population, GDP, GDP per capita and growth for every province, with a sortable table.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="provinces.js"></script>
+</head>
+<body data-page="provinces">
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <h1>China by the Numbers</h1>
+      <p class="tagline">National statistics, 2024 · an independent statistics site</p>
+    </div>
+    <p class="scope">Figures for mainland China (excluding Hong Kong, Macao and Taiwan) · Sources: National Bureau of Statistics &amp; provincial statistical communiques</p>
+    <nav class="tabs" aria-label="Sections">
+      <a href="index.html">Overview</a>
+      <a href="economy.html">Economy</a>
+      <a href="people.html">People</a>
+      <a href="provinces.html" aria-current="page">Provinces</a>
+      <a href="employment.html">Employment</a>
+      <a href="trade.html">Trade</a>
+      <a href="energy.html">Energy</a>
+      <a href="compare.html">Compare</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-head">
+    <span class="kicker">Provinces · 2024</span>
+    <h2>Thirty-one provinces, from Guangdong’s $1.99 trillion to Tibet’s $39 billion</h2>
+    <p>China’s provinces are economies in their own right: Guangdong alone is larger than most countries. Every province below carries its year-end population, its GDP in yuan and dollars, its real growth, and its GDP per person.</p>
+  </div>
+
+  <section class="kpis" aria-label="Provincial highlights 2024">
+    <div class="kpi">
+      <div class="label">Largest provincial economy</div>
+      <div class="value">Guangdong</div>
+      <div class="sub">¥141,634bn · $1.99tn · 10.5% of national GDP</div>
+      <div class="src">Provincial 2024 communique</div>
+    </div>
+    <div class="kpi">
+      <div class="label">GDP per capita, highest</div>
+      <div class="value">Beijing</div>
+      <div class="sub">¥228,324 · $32,060 per person</div>
+      <div class="src">Provincial 2024 communique</div>
+    </div>
+    <div class="kpi hot">
+      <div class="label">Fastest real growth</div>
+      <div class="value">Tibet, 6.3%</div>
+      <div class="sub">then Xinjiang, 6.1% · slowest: Shanxi, 2.3%</div>
+      <div class="src">Provincial 2024 communiques</div>
+    </div>
+  </section>
+
+  <div class="grid-2">
+    <section class="card">
+      <h3>The ten largest provincial economies</h3>
+      <p class="hint">Regional GDP, 2024, billion yuan.</p>
+      <div class="chart" id="chart-prov-gdp" aria-label="Top ten provinces by GDP chart"></div>
+      <p class="source">Source: provincial 2024 statistical communiques; NBS preliminary figures.</p>
+    </section>
+    <section class="card">
+      <h3>The ten richest provinces per person</h3>
+      <p class="hint">GDP per capita, 2024, yuan. Beijing and Shanghai lead by a wide margin.</p>
+      <div class="chart" id="chart-prov-percapita" aria-label="Top ten provinces by GDP per capita chart"></div>
+      <p class="source">Source: provincial GDP divided by year-end population; see Sources.</p>
+    </section>
+  </div>
+
+  <section class="card">
+    <h3>All 31 provinces, 2024</h3>
+    <p class="hint">Click a column heading to sort. Population is year-end permanent residents; GDP is preliminary regional GDP.</p>
+    <table class="data" id="table-prov">
+      <caption>Population in millions; change in population in units of 10,000 people; GDP in billion yuan and billion US$; GDP per capita in yuan and US$.</caption>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th><button type="button" class="sort" data-col="1">Province</button></th>
+          <th><button type="button" class="sort" data-col="2" data-numeric="1">Population (m)</button></th>
+          <th><button type="button" class="sort" data-col="3" data-numeric="1">Change (10k)</button></th>
+          <th><button type="button" class="sort" data-col="4" data-numeric="1">GDP (¥bn)</button></th>
+          <th><button type="button" class="sort" data-col="5" data-numeric="1">GDP ($bn)</button></th>
+          <th><button type="button" class="sort" data-col="6" data-numeric="1">Growth</button></th>
+          <th><button type="button" class="sort" data-col="7" data-numeric="1">GDP per capita (¥)</button></th>
+          <th><button type="button" class="sort" data-col="8" data-numeric="1">GDP per capita ($)</button></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <p class="note" id="prov-notes"></p>
+    <p class="note">Two totals do not match the national figure exactly, and the site does not force them to: the provinces’ population sums to 1,406.28 million against the national 1,408.28 million (the gap is mainly military personnel, counted nationally but not by any province), and their GDP sums to ¥134,031bn against the national ¥134,908bn, a 0.65% gap — the usual difference between provincial aggregation and national accounting. Dollars use the 2024 average rate of ¥7.1217 per US$.</p>
+    <p class="source">Sources: provincial statistical communiques 2024; National Bureau of Statistics preliminary regional GDP. <a href="sources.html">Full sources and methods →</a></p>
+  </section>
+</main>
+
+<footer class="site">
+  <p>China by the Numbers — an independent statistics site. Figures are for mainland China unless stated. Data: provincial 2024 statistical communiques; National Bureau of Statistics.</p>
+  <p>Built as an entry for make.fun’s “Make the best national statistics site” bounty.</p>
+</footer>
+</body>
+</html>
