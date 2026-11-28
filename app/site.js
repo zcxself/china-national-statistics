@@ -81,6 +81,74 @@ function renderOverview() {
   }
 }
 
+// ---- Trends -----------------------------------------------------------------
+function renderTrends() {
+  const gdp = byId('chart-trends-gdp');
+  if (gdp) {
+    const draw = (mode) => {
+      const series = mode === 'per-capita' ? GDP_PER_CAPITA : GDP_USD;
+      const points = series.map((d) => ({ label: d.year, value: d.value }));
+      renderInto(
+        gdp,
+        lineChart(points, {
+          decimals: mode === 'per-capita' ? 0 : 2,
+          color: mode === 'per-capita' ? TEAL : CHINA,
+        }),
+      );
+      const cap = byId('trends-gdp-caption');
+      if (cap) {
+        cap.textContent =
+          mode === 'per-capita'
+            ? 'GDP per capita, current US$ (World Bank WDI; 2016-2023 computed from GDP ÷ population).'
+            : 'GDP in current US$ (World Bank WDI, July 2026 update). The 2020-2021 jump is mostly the yuan’s appreciation, not a surge in output.';
+      }
+    };
+    draw('total');
+    document.querySelectorAll('[data-trends-gdp-toggle] button').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('[data-trends-gdp-toggle] button').forEach((b) => b.setAttribute('aria-pressed', 'false'));
+        btn.setAttribute('aria-pressed', 'true');
+        draw(btn.dataset.mode);
+      });
+    });
+  }
+
+  const pop = byId('chart-trends-pop');
+  if (pop) {
+    renderInto(
+      pop,
+      lineChart(
+        POPULATION_MID.map((d) => ({ label: d.year, value: d.value })),
+        { unit: '', decimals: 2, color: NAVY, domain: [13, 15] },
+      ),
+    );
+  }
+
+  const pc = byId('chart-trends-percapita');
+  if (pc) {
+    renderInto(
+      pc,
+      lineChart(
+        GDP_PER_CAPITA.map((d) => ({ label: d.year, value: d.value })),
+        { decimals: 0, color: TEAL },
+      ),
+    );
+  }
+
+  const table = byId('table-trends');
+  if (table) {
+    const tbody = table.querySelector('tbody');
+    const fmtNum = (v, d = 0) =>
+      v.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+    tbody.innerHTML = GDP_USD.map((d, i) => {
+      const pop = POPULATION_MID[i].value;
+      const pcVal = GDP_PER_CAPITA[i].value;
+      const change = (((d.value - GDP_USD[0].value) / GDP_USD[0].value) * 100).toFixed(1);
+      return `<tr><td><strong>${d.year}</strong></td><td>${fmtNum(d.value, 2)}</td><td>${fmtNum(pop * 100, 1)}</td><td>${fmtNum(pcVal)}</td><td>${i === 0 ? '—' : `+${change}%`}</td></tr>`;
+    }).join('');
+  }
+}
+
 // ---- Economy --------------------------------------------------------------
 function renderEconomy() {
   const gdp = byId('chart-gdp-long');
@@ -358,6 +426,7 @@ function renderTrade() {
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.body.dataset.page;
   if (page === 'overview') renderOverview();
+  if (page === 'trends') renderTrends();
   if (page === 'economy') renderEconomy();
   if (page === 'people') renderPeople();
   if (page === 'compare') renderCompare();

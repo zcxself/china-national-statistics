@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/best-national-statistics-site-20261126-0539/zcxself/china-national-statistics/rank.svg)](https://make.fun/bounty/best-national-statistics-site-20261126-0539/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=best-national-statistics-site-20261126-0539)
 [![reward](https://make.fun/badge/best-national-statistics-site-20261126-0539/zcxself/china-national-statistics/reward.svg)](https://make.fun/bounty/best-national-statistics-site-20261126-0539?utm_source=github&utm_medium=readme&utm_campaign=best-national-statistics-site-20261126-0539)
 
-China by the Numbers — an independent national statistics site for China in 2024: population, GDP, growth, urbanisation and ageing, with every figure sourced and dated. Nine pages (Overview, Economy, People, Provinces, Employment, Trade, Energy, Compare, Sources), hand-drawn SVG charts, working toggles and sortable tables, all as static files that run offline with no network requests. The Provinces page covers all 31 provinces with population, GDP, GDP per capita and growth; Employment, Trade and Energy add the 2024 jobs, goods-trade and energy figures.
+China by the Numbers — an independent national statistics site for China in 2024: population, GDP, growth, urbanisation and ageing, with every figure sourced and dated. Eleven pages (Overview, Economy, People, Trends, Provinces, Regions, Employment, Trade, Energy, Compare, Sources), hand-drawn SVG charts, working toggles and sortable tables, all as static files that run offline with no network requests. The Provinces page covers all 31 provinces with population, GDP, GDP per capita and growth; the Trends page follows GDP, population and GDP per person across 2015–2024; the Regions page measures the gaps between provinces (top-5 share 39.7%, richest vs poorest per person 4.3×); Employment, Trade and Energy add the 2024 jobs, goods-trade and energy figures.
 
 ## Run it
 
@@ -24,4 +24,4 @@ All figures are 2024 (or 2015–2024 series from the same publications): Nationa
 
 ---
 
-<sub>Entered on [make.fun](https://make.fun/?ref={referral_code}&utm_source=github&utm_medium=readme&utm_campaign=best-national-statistics-site-20261126-0539) · AI agents build software for cash rewards</sub>
+<sub>Entered on [make.fun](https://make.fun/?ref=hnzwb0g9&utm_source=github&utm_medium=readme&utm_campaign=best-national-statistics-site-20261126-0539) · AI agents build software for cash rewards</sub>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regions — China by the Numbers</title>
+<meta name="description" content="China's regional gaps in 2024: the top 5 provinces hold 39.7% of provincial GDP, the richest province per person earns 4.3 times the poorest, and growth runs from 6.3% to 2.3%.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="regions.js"></script>
+</head>
+<body data-page="regions">
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <h1>China by the Numbers</h1>
+      <p class="tagline">National statistics, 2024 · an independent statistics site</p>
+    </div>
+    <p class="scope">Figures for mainland China (excluding Hong Kong, Macao and Taiwan) · Sources: National Bureau of Statistics &amp; provincial statistical communiques</p>
+    <nav class="tabs" aria-label="Sections">
+      <a href="index.html">Overview</a>
+      <a href="economy.html">Economy</a>
+      <a href="people.html">People</a>
+      <a href="trends.html">Trends</a>
+      <a href="provinces.html">Provinces</a>
+      <a href="regions.html" aria-current="page">Regions</a>
+      <a href="employment.html">Employment</a>
+      <a href="trade.html">Trade</a>
+      <a href="energy.html">Energy</a>
+      <a href="compare.html">Compare</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-head">
+    <span class="kicker">Regions · 2024</span>
+    <h2>One country, very different economies</h2>
+    <p>The five largest provinces hold almost two-fifths of all provincial GDP, the richest province per person earns 4.3 times the poorest, and the fastest-growing province grows nearly three times as fast as the slowest. The gaps are the story of China’s regions — and they are all computed from the same 31-province table on the <a href="provinces.html">Provinces</a> page.</p>
+  </div>
+
+  <section class="kpis" aria-label="Regional gaps 2024">
+    <div class="kpi hot">
+      <div class="label">Top 5 provinces’ share of provincial GDP</div>
+      <div class="value">39.7%</div>
+      <div class="sub">Guangdong, Jiangsu, Shandong, Zhejiang, Sichuan</div>
+      <div class="src">Provincial 2024 communiques</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Top 10 provinces’ share</div>
+      <div class="value">61.2%</div>
+      <div class="sub">the other 21 provinces share the remaining 38.8%</div>
+      <div class="src">Provincial 2024 communiques</div>
+    </div>
+    <div class="kpi">
+      <div class="label">GDP per person: richest vs poorest</div>
+      <div class="value">4.3×</div>
+      <div class="sub">Beijing ¥228,324 vs Gansu ¥52,900</div>
+      <div class="src">Provincial 2024 communiques</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Real growth: fastest vs slowest</div>
+      <div class="value">6.3% vs 2.3%</div>
+      <div class="sub">Tibet fastest, then Xinjiang 6.1% · Shanxi slowest, then Qinghai 2.7%</div>
+      <div class="src">Provincial 2024 communiques</div>
+    </div>
+  </section>
+
+  <div class="grid-2">
+    <section class="card">
+      <h3>How concentrated is the economy?</h3>
+      <p class="hint">Each of the ten largest provinces’ share of the 31 provinces’ combined GDP, 2024.</p>
+      <div class="chart" id="chart-region-share" aria-label="Top ten provinces by share of provincial GDP chart"></div>
+      <p class="note">Guangdong alone is 10.6% of provincial GDP; the top two, Guangdong and Jiangsu, are 20.8% together. The shares below are of the provinces’ combined ¥1,340,315bn, not of national GDP.</p>
+      <p class="source">Source: provincial 2024 statistical communiques; NBS preliminary figures.</p>
+    </section>
+    <section class="card">
+      <h3>Growth: the fastest five and the slowest five</h3>
+      <p class="hint">Real GDP growth, 2024. The two fastest growers are both in the west.</p>
+      <div class="chart" id="chart-region-growth" aria-label="Fastest and slowest growing provinces chart"></div>
+      <p class="note">Tibet (6.3%) and Xinjiang (6.1%) lead; Shanxi (2.3%) trails. The national rate was 5.0%.</p>
+      <p class="source">Source: provincial 2024 statistical communiques; NBS 2024 communique.</p>
+    </section>
+  </div>
+
+  <div class="grid-2">
+    <section class="card">
+      <h3>Richest per person</h3>
+      <p class="hint">GDP per capita, 2024, yuan. Beijing and Shanghai lead by a wide margin.</p>
+      <div class="chart" id="chart-region-rich" aria-label="Richest provinces per person chart"></div>
+      <p class="source">Source: provincial GDP divided by year-end population; see Sources.</p>
+    </section>
+    <section class="card">
+      <h3>Poorest per person</h3>
+      <p class="hint">GDP per capita, 2024, yuan. All five sit below the national ¥95,749.</p>
+      <div class="chart" id="chart-region-poor" aria-label="Poorest provinces per person chart"></div>
+      <p class="note">Gansu, at ¥52,900, is the lowest — less than a quarter of Beijing’s ¥228,324.</p>
+      <p class="source">Source: provincial GDP divided by year-end population; see Sources.</p>
+    </section>
+  </div>
+
+  <section class="card">
+    <h3>The top five and the bottom five economies</h3>
+    <p class="hint">The five largest and five smallest provincial economies side by side, 2024. Share is of the 31 provinces’ combined GDP.</p>
+    <table class="data" id="table-regions">
+      <caption>GDP in billion yuan and billion US$; share of the 31 provinces’ combined GDP; population in millions; GDP per capita in yuan.</caption>
+      <thead>
+        <tr><th>Province</th><th>GDP (¥bn)</th><th>GDP ($bn)</th><th>Share</th><th>Population (m)</th><th>GDP per capita (¥)</th><th>Growth</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <p class="note">The top five together (¥532,036bn) are larger than the bottom 21 combined. The bottom five together (¥33,158bn) are smaller than Guangdong’s neighbour Fujian alone (¥57,761bn).</p>
+    <p class="source">Sources: provincial statistical communiques 2024; National Bureau of Statistics preliminary regional GDP. <a href="provinces.html">All 31 provinces, sortable →</a></p>
+  </section>
+
+  <section class="callout">
+    <h3>What the gaps mean</h3>
+    <p>Size and wealth point in different directions. The biggest economies — Guangdong, Jiangsu, Shandong — are coastal and populous; the richest per person — Beijing, Shanghai — are small and urban; the fastest growers — Tibet, Xinjiang — are western and small. And the gaps are wide even inside one country: the richest province per person earns 4.3 times the poorest. For scale, the gap between the richest and poorest of the four countries on the <a href="compare.html">Compare</a> page is wider still — the United States at $86,170 per person against India at $2,592 — but that is between countries, not within one.</p>
+  </section>
+</main>
+
+<footer class="site">
+  <p>China by the Numbers — an independent statistics site. Figures are for mainland China unless stated. Data: provincial 2024 statistical communiques; National Bureau of Statistics.</p>
+  <p>Built as an entry for make.fun’s “Make the best national statistics site” bounty.</p>
+</footer>
+</body>
+</html>

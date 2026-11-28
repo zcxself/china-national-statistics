@@ -93,9 +93,11 @@ export const POPULATION_MID = [
 
 // GDP per capita, current US$ — the two endpoints are published (WDI);
 // the years between are GDP divided by population, computed from the series above.
+// Units: GDP in $ trillion is $1,000bn; population in 100m is 100m people, so
+// ($tn x 10,000) / (100m people) gives dollars per person.
 export const GDP_PER_CAPITA = GDP_USD.map((d, i) => ({
   year: d.year,
-  value: Math.round((d.value * 1000) / POPULATION_MID[i].value),
+  value: Math.round((d.value * 10000) / POPULATION_MID[i].value),
 }));
 
 // Real GDP growth, % year on year (NBS). 2024 by quarter.
