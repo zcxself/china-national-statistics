@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explore — China by the Numbers</title>
+<meta name="description" content="Build your own chart from China's 2015-2024 statistics: pick an indicator — GDP, GDP per capita, population, urbanisation, births and deaths — and draw it as a line or bars.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="explore.js"></script>
+</head>
+<body data-page="explore">
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <h1>China by the Numbers</h1>
+      <p class="tagline">National statistics, 2024 · an independent statistics site</p>
+    </div>
+    <p class="scope">Figures for mainland China (excluding Hong Kong, Macao and Taiwan) · Sources: National Bureau of Statistics &amp; World Bank</p>
+    <nav class="tabs" aria-label="Sections">
+      <a href="index.html">Overview</a>
+      <a href="economy.html">Economy</a>
+      <a href="people.html">People</a>
+      <a href="trends.html">Trends</a>
+      <a href="provinces.html">Provinces</a>
+      <a href="regions.html">Regions</a>
+      <a href="cities.html">Cities</a>
+      <a href="employment.html">Employment</a>
+      <a href="trade.html">Trade</a>
+      <a href="energy.html">Energy</a>
+      <a href="compare.html">Compare</a>
+      <a href="explore.html" aria-current="page">Explore</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-head">
+    <span class="kicker">Explore · 2015–2024</span>
+    <h2>Build your own chart</h2>
+    <p>Every series on this site, in one place. Pick an indicator, pick lines or bars, and the chart redraws from the same verified figures used on the other pages — nothing here is estimated or made up.</p>
+  </div>
+
+  <section class="card">
+    <h3>Pick an indicator</h3>
+    <div class="toggle" data-explore-indicator role="group" aria-label="Indicator">
+      <button type="button" data-mode="gdp" aria-pressed="true">GDP ($tn)</button>
+      <button type="button" data-mode="percapita" aria-pressed="false">GDP per capita ($)</button>
+      <button type="button" data-mode="pop" aria-pressed="false">Population (100m)</button>
+      <button type="button" data-mode="urban" aria-pressed="false">Urbanisation (%)</button>
+      <button type="button" data-mode="births" aria-pressed="false">Births &amp; deaths (m)</button>
+    </div>
+    <div class="toggle" data-explore-type role="group" aria-label="Chart type">
+      <button type="button" data-mode="line" aria-pressed="true">Line</button>
+      <button type="button" data-mode="bar" aria-pressed="false">Bars</button>
+    </div>
+    <div class="chart" id="chart-explore" aria-label="Custom chart"></div>
+    <p class="note" id="explore-readout"></p>
+    <p class="source" id="explore-caption"></p>
+  </section>
+
+  <section class="card">
+    <h3>What to look for</h3>
+    <ul class="tight">
+      <li><strong>GDP:</strong> up 66.0% in dollars from 2015 to 2024 — but the 2020–2021 jump is mostly the yuan’s appreciation, not a surge in output.</li>
+      <li><strong>GDP per capita:</strong> $8,175 in 2015 to $13,293 in 2024, up 62.6%; still below Japan ($33,797) and the US ($86,170).</li>
+      <li><strong>Population:</strong> peaked at 1,412.4 million in 2021 (mid-year estimate) and has fallen every year since.</li>
+      <li><strong>Urbanisation:</strong> 56.1% in 2015 to 67.0% in 2024 — two in three residents now live in towns and cities.</li>
+      <li><strong>Births &amp; deaths:</strong> deaths have outnumbered births every year since 2022; 2024 saw 9.54 million births against 10.93 million deaths.</li>
+    </ul>
+    <p class="source">Sources: World Bank WDI (July 2026 update); NBS communiques 2021–2024. See <a href="sources.html">Sources</a> for the exact publications.</p>
+  </section>
+</main>
+
+<footer class="site">
+  <p>China by the Numbers — an independent statistics site. Figures are for mainland China unless stated. Data: NBS 2024 statistical communique (28 Feb 2025); World Bank World Development Indicators, July 2026 update.</p>
+  <p>Built as an entry for make.fun’s “Make the best national statistics site” bounty.</p>
+</footer>
+</body>
+</html>

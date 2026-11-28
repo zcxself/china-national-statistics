@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cities — China by the Numbers</title>
+<meta name="description" content="China's ten largest city economies in 2024: GDP, growth, population and GDP per person for Shanghai, Beijing, Shenzhen and the rest, with a sortable table.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="cities.js"></script>
+</head>
+<body data-page="cities">
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <h1>China by the Numbers</h1>
+      <p class="tagline">National statistics, 2024 · an independent statistics site</p>
+    </div>
+    <p class="scope">Figures for mainland China (excluding Hong Kong, Macao and Taiwan) · Sources: city statistical communiques, 2024</p>
+    <nav class="tabs" aria-label="Sections">
+      <a href="index.html">Overview</a>
+      <a href="economy.html">Economy</a>
+      <a href="people.html">People</a>
+      <a href="trends.html">Trends</a>
+      <a href="provinces.html">Provinces</a>
+      <a href="regions.html">Regions</a>
+      <a href="cities.html" aria-current="page">Cities</a>
+      <a href="employment.html">Employment</a>
+      <a href="trade.html">Trade</a>
+      <a href="energy.html">Energy</a>
+      <a href="compare.html">Compare</a>
+      <a href="explore.html">Explore</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-head">
+    <span class="kicker">Cities · 2024</span>
+    <h2>Ten cities carry the economy</h2>
+    <p>Shanghai’s economy (¥53,927bn) is bigger than most countries’. The ten largest cities produced ¥315,503bn between them in 2024 — and 27 Chinese cities passed ¥1 trillion. But size and wealth are different things: Chongqing is the biggest city by people and the poorest of the ten per person, while Beijing earns the most per resident.</p>
+  </div>
+
+  <section class="card">
+    <h3>GDP of the ten largest cities, 2024</h3>
+    <p class="hint">Billion yuan. Shanghai alone is about 4.0% of national GDP.</p>
+    <div class="chart" id="chart-city-gdp" aria-label="City GDP chart"></div>
+    <p class="source">Source: each city’s 2024 statistical communique, as tabulated in the Quanzhou Statistical Yearbook 2025 appendix. National GDP 2024: ¥1,349,084bn (NBS).</p>
+  </section>
+
+  <section class="card">
+    <h3>The table, 2024</h3>
+    <p class="hint">Click any column heading to sort the table by that column. GDP per person is GDP ÷ population, computed here and marked derived.</p>
+    <table class="data" id="cities-table">
+      <caption>GDP and growth: city 2024 statistical communiques. Population: year-end permanent residents, 2024. GDP per person: derived.</caption>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col"><button type="button" class="sort" data-col="1" data-numeric="0">City</button></th>
+          <th scope="col"><button type="button" class="sort" data-col="2" data-numeric="1">GDP (¥bn)</button></th>
+          <th scope="col"><button type="button" class="sort" data-col="3" data-numeric="1">Growth (%)</button></th>
+          <th scope="col"><button type="button" class="sort" data-col="4" data-numeric="1">Population (m)</button></th>
+          <th scope="col"><button type="button" class="sort" data-col="5" data-numeric="1">GDP per person (¥, derived)</button></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <div class="grid-2">
+    <section class="card">
+      <h3>GDP per person, 2024</h3>
+      <p class="hint">Yuan per resident, derived from GDP ÷ population. Beijing tops the list; Chongqing trails despite its size.</p>
+      <div class="chart" id="chart-city-percapita" aria-label="City GDP per person chart"></div>
+      <p class="source">Source: derived from the table above. National GDP per person 2024: ¥95,749 (NBS).</p>
+    </section>
+
+    <section class="card">
+      <h3>What the cities show</h3>
+      <ul class="tight">
+        <li><strong>Two leagues:</strong> Shanghai (¥53,927bn) and Beijing (¥49,843bn) are a class of their own; the next eight run from Shenzhen (¥36,802bn) down to Nanjing (¥18,501bn).</li>
+        <li><strong>Growth:</strong> Suzhou grew fastest of the ten (6.0%), then Shenzhen (5.8%); Guangzhou was slowest (2.1%), held back by its car industry.</li>
+        <li><strong>People:</strong> Chongqing (31.91m) is the only city above 30 million; Shanghai (24.80m) actually shrank by 72,000 people in 2024, while Shenzhen added 199,000 — the most of any city.</li>
+        <li><strong>Wealth per person:</strong> Beijing (¥228,303) and Shanghai (¥217,424) are more than twice Chongqing (¥100,874) — the municipal area counts farmland as well as the city itself.</li>
+      </ul>
+      <p class="note" id="city-notes"></p>
+      <p class="source">Sources: city 2024 statistical communiques; Shanghai 2024 communique for its population change. See <a href="sources.html">Sources</a> for the exact publications.</p>
+    </section>
+  </div>
+</main>
+
+<footer class="site">
+  <p>China by the Numbers — an independent statistics site. Figures are for mainland China unless stated. Data: city 2024 statistical communiques; NBS 2024 statistical communique (28 Feb 2025).</p>
+  <p>Built as an entry for make.fun’s “Make the best national statistics site” bounty.</p>
+</footer>
+</body>
+</html>
